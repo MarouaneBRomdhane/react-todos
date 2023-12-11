@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useState } from "react";
 const AddTask = ({ setTasks }) => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
 
-  const onTextChanged = event => setText(event.target.value);
+  const onTextChanged = (event) => setText(event.target.value);
 
-  const onAddClicked = event => {
-    if (text === '') {
-      alert('Please Enter a Task Name');
+  const onAddClicked = (event) => {
+    if (text === "") {
+      alert("Please Enter a Task Name");
     } else {
       const newTask = { id: Date.now(), taskName: text, isDone: false };
       console.log(newTask);
-      setTasks(prev => [...prev, newTask]);
-      setText('');
+      setTasks((prev) => [...prev, newTask]);
+      setText("");
     }
   };
 

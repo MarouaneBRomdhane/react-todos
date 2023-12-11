@@ -1,5 +1,5 @@
-import React from 'react';
-import AddTask from './AddTask';
+import React from "react";
+import AddTask from "./AddTask";
 
 const Header = ({ setTasks }) => {
   return (
